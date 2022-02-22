@@ -18,14 +18,14 @@ class TodayFood:
         for line in f:
             linearr = line.split(', ')
             foodObjects.append(Food(linearr[0], int(linearr[1]), int(linearr[2]), int(linearr[3]), str(linearr[4]) == "True\n"))
-            print("blah" + linearr[4] + 'blah')
+#            print("blah" + linearr[4] + 'blah')
         f.close()
         return foodObjects
 
     def WriteFoodObjects(self):
         f = open(self.file_, 'w')
         for line in self.FoodObjects_:
-            print(line.name + " " + str(line.probiotic))
+ #           print(line.name + " " + str(line.probiotic))
             f.write(line.name + ", " + str(line.calories) + ", " + str(line.protein) + ", " + str(line.fiber) + ", " + str(line.probiotic) + "\n")
         f.close()
 
